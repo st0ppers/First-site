@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    font-size: 16px;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+}
+.container{
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "content"
+    "aside"
+    "footer";
+    grid-template-rows: auto 2fr auto auto;
+}
+.header{
+    background-color: #ff694f;
+    min-height: auto;
+    grid-area: header;
+    padding-left: 20px;
+}
+li{
+    list-style: none;
+}
+.navigation{
+    float: left;
+    padding:10px 20px;
+}
+.navigation a:hover{
+    color: lightslategray;
+}
+.content{   
+    background-color: #ff904f;
+    grid-area: content;
+}
+h1{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    font-size: 28px;
+}
+h2{
+    font-size: 21px;
+    padding: 5px 20px;
+}
+h3{
+    font-size: 16px;
+    padding: 2px 10px ;
+}
+p{
+    padding: 8px;
+}
+.main-image{
+    width: 350px;
+    height: 130px;
+    margin: 10px;
+}
+.aside{
+    background-color: #ffb04f;
+    min-height: 100px;
+    grid-area: aside;
+}
+.aside-img{
+    width: 120px;
+    height: 120px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.footer{
+    background-color: #ffd94f;
+    width: 100%;
+    grid-area: footer;
+}
+.navigation-footer{
+    float: left;    
+    padding: 10px ;
+    margin: 10px;
+}
+footer nav div ul li ul li a:hover
+{
+    color: lightslategray;
+}
+.otstup{
+    padding: 5px 10px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+/*tablet*/
+@media only screen and (min-width:768px){
+    .container{
+        grid-template-areas: 
+        "header header"
+        "aside content"
+        "footer footer";
+        grid-template-rows: auto  1fr auto;
+        grid-template-columns: 30% 1fr;
+    }
+    .header{
+        padding-left: 30%;
+    }
+    body{
+        font-size: 18px;
+    }
+    .footer-container{
+        margin-left: 30%;
+    }
+    .navigation-footer{
+        margin-right:30px;
+    }
+}
+/*Computer screen*/
+@media only screen and (min-width:1024px){
+    .container{
+        grid-template-areas: 
+        "header header header"
+        "content content aside"
+        "footer footer footer";
+        grid-template-rows: auto  1fr auto;
+        grid-template-columns: 30% 40% 30%;
+    }
+    
+    .header{
+        padding-left:50px;
+    }
+    body{
+        font-size: 20px;
+    }
+    .footer-container{
+        display: inline;;
+        margin-right: 30%;
+    }
+    .navigation-footer{
+        margin-left: 50px;
+    }
+    
+}
