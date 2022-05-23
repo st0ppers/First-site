@@ -1,0 +1,30 @@
+	Уеб програмиране 
+1готово
+2(трябва да се добави стил за ландскейп) 
+3готово
+4направи(проверка за сигурна парола – големи/малки букви, числа, символи).
+5готово  (не съм използвал всички свойства)
+6готово
+7готово
+8готово(трябва да провериш )
+
+	Уеб дизайн
+1(трябва да направиш боотстрап сайт)
+2готово
+3(трябва да се добави стил за ландскейп)
+4готово
+5готово
+6готово
+7готово
+8готово
+9готово
+
+
+	later add meta tags:
+<meta name="title" content="Mechanical keyboards">
+<meta name="description" content="This site is about showing what is a mechanical keyboard. What are mechanical switches.">
+<meta name="keywords" content="Mechanical, keyboard, switch , keycap , linear, clicky , tactile, ">
+<meta name="robots" content="index, follow">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="language" content="English">
+<meta name="author" content="Alexander Damov">
