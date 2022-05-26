@@ -18,7 +18,7 @@ body{
     grid-template-rows: auto 2fr auto auto;
 }
 .header{
-    background-color: #ff694f;
+    background-color: #ffd94f;
     min-height: auto;
     grid-area: header;
     padding-left: 20px;
@@ -78,6 +78,7 @@ p{
     background-color: #ffd94f;
     width: 100%;
     grid-area: footer;
+    padding-top: 10px;
     
 }
 .footer-container{
@@ -103,17 +104,22 @@ a{
     color: black;
 }
 
-/* phone landscape */
-@media only screen and (max-width:767px) and (orientation:landscape){
+
+/*  576px, 768px, 992px, 1200px, */
+
+@media only screen and (min-width:576px) {
     .header{
         padding:5px;
         display: flex;
         justify-content: center;
     }
+    .content{
+        padding-left: 3rem ;
+        padding-right: 3rem ;
+    }
     .main-image{
-        width: 570px;
-        height:200px;
-        margin: 10px 40px;
+        width: 420px;
+        height:150px;
     }
     .footer-col{
         text-align: center;
@@ -131,11 +137,17 @@ a{
         grid-template-rows: auto  1fr auto;
         grid-template-columns: 25% 1fr;
     }
+    /* here
     .header{
-        padding-left: 25%;
-    }
+        margin-left:25% ;
+        max-width: 75%;
+    } */
     body{
         font-size: 18px;
+    }
+    .content{
+        padding-left: 15px ;
+        padding-right: 15px ;
     }
     .aside-text{
         max-width: 100%;
@@ -155,9 +167,12 @@ a{
     .column{
         columns:1;
     }
-    .footer-container{
-        margin-left: 25%;
-    }
+/*     
+    footer{
+        margin-left:25% ;
+        max-width: 75%;
+    } */
+
     .footer-col{
         text-align: center;
         width: 25%;
@@ -165,10 +180,17 @@ a{
 }
 
 
-/* tablet landscape */
-@media only screen and (min-width:768px) and (orientation:landscape){
+/*laptop*/
+@media only screen and (min-width:992px) {
 
-    
+   
+    .content{
+        padding-left: 3rem ;
+        padding-right: 3rem ;
+    }
+    body{
+        font-size: 20px;
+    }
 
 }
 
@@ -183,10 +205,11 @@ a{
         grid-template-columns: 30% 50% 20%;
     }
     .header{
-        padding-left:10%;
+        display: block;
+        padding-left: 5rem;
     }
-    body{
-        font-size: 20px;
+    nav ul li a{
+        padding-left:4rem ;
     }
     .column{
         columns:2 570px;
