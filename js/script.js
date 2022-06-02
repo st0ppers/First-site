@@ -7,15 +7,6 @@ const time = document.getElementById("time");
 const form = document.getElementById("form");
 const errorElement = document.getElementById("error");
 
-let upperPass = password.value.toUpperCase();
-let counter = 0;
-
-for (let i = 0; i < password.value.length; i++) {
-  if (password[i] === upperPass[i]) {
-    counter++;
-  }
-}
-
 form.addEventListener("submit", (e) => {
   let messages = [];
 
@@ -25,9 +16,9 @@ form.addEventListener("submit", (e) => {
   if (password.value.length <= 6) {
     messages.push("Passowrd must be longer than 6 characters!");
   }
-  if (counter == 0) {
-    //think of a solution for upper case password
-    messages.push("Password must contain uppercase letter!");
+  if (!isValidPassword(password.value.trim())) {
+    //add in the description about ? and !
+    messages.push("Password must contain uppercase letter and '?' !");
   }
   if (password.value != confirmPassword.value) {
     messages.push("Confirmed password does match the original");
@@ -58,4 +49,8 @@ const isValidEmail = (email) => {
   const re =
     /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   return re.test(String(email).toLowerCase());
+};
+const isValidPassword = (password) => {
+  const regex = /(?=.*[a-z])(?=.*[0-9])(?=.*[A-Z])(?=.*[!?])[a-zA-Z0-9!?]{6,}/g;
+  return regex.test(String(password));
 };

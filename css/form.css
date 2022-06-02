@@ -10,7 +10,7 @@ body{
     justify-content: center;
     align-items: center;
     padding: 10px;
-    background-color: coral;
+    background-color: #d32e2ea4;
     font-size: 18px;
 }
 .container{
@@ -18,7 +18,7 @@ body{
     width: 100%;
     padding:  25px 30px;
     border-radius: 10px;
-    background-color: white;
+    background-color:#FFE5DC;
 }
 h1{
     font-size: 28px;
@@ -43,11 +43,11 @@ button{
     margin: 0 auto;
     display: flex;
     justify-content: center;
-    background-color: coral;
+    background-color: #d32e2ea4;
 }
 button:active{
-    color: white;
-    background-color: coral;
+    background-color: #FFE5DC;
+    color: #d32e2ea4;;
 }
 #error{
     text-align: center;
