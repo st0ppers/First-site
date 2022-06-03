@@ -140,17 +140,64 @@ h2{
     justify-content: space-evenly;
     align-content: center;
 }
-.size-container{
-    display: flex;
-    padding: 0px 10%;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-.pad{
-    padding: 2rem 0;
-    width: 30%;
+.pad{ 
+    width: 100%;
+    overflow: hidden;    
     transition: 0.2s linear;
-
+    align-self: center;
+}
+.order{
+    padding: 0px 10% 2rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 1fr 20px 1fr 20px;
+    grid-template-areas: 
+    "img1 img2 img3"
+    "text1 text2 text3"
+    "img4 img5 img6"
+    "text4 text5 text6";
+    gap: 1rem;
+    align-content: center;
+}
+.i1{
+    grid-area: img1;
+}
+.i2{
+    grid-area: img2;
+}
+.i3{
+    grid-area: img3;
+}
+.i4{
+    grid-area: img4;
+}
+.i5{
+    grid-area: img5;
+}
+.i6{
+    grid-area: img6;
+}
+.text{
+    text-align: center;
+    align-self: center;
+}
+.t1{
+    grid-area: text1;
+}
+.t2{
+    grid-area: text2;
+}
+.t3{
+    grid-area: text3;
+}
+.t4{
+    grid-area: text4;
+}
+.t5{
+    grid-area: text5;
+}
+.t6{
+    grid-area: text6;
 }
 /* main ends*/
 
@@ -227,13 +274,6 @@ h2{
     .switch{
         padding: 12px 5%;
     }
-    .size-container{
-        padding: 0px 8%;
-    }
-    .pad{
-        padding: 2rem 3px;
-        width: 48%;
-    }
     .footer-container{
         padding: 2rem 8%;
     }
@@ -282,10 +322,6 @@ h2{
     .size-container{
         padding: 0px 4%;
     }
-    .pad{
-        padding: 2rem 3px;
-        width: 48%;
-    }
     .footer-container{
         padding: 4px 4%;
     }
@@ -295,6 +331,19 @@ h2{
     .footer-flex a{
         width: 80px;
         height: 30px;
+    }
+    .order{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows:auto;
+        grid-template-areas: 
+        "img1 img2 "
+        "text1 text2 "
+        "img3 img4 "
+        "text3 text4"
+        "img5 img6 "
+        "text5 text6"
+        ;
     }
 
 }
@@ -338,9 +387,6 @@ h2{
     .size-container{
         padding: 0px 2%;
     }
-    .pad{
-        width: 100%;
-    }
     .footer-flex{
         flex-wrap: wrap;
         justify-content: space-evenly;
@@ -352,7 +398,25 @@ h2{
     .footer-container{
         padding: 2rem 2%;
     }
-
+    .order{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows:auto;
+        grid-template-areas: 
+        "img1"
+        "text1"
+        "img2"
+        "text2"
+        "img3"
+        "text3"
+        "img4"
+        "text4"
+        "img5"
+        "text5"
+        "img6"
+        "text6"
+        ;
+    }
 }
 
 

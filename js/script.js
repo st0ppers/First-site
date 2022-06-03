@@ -17,7 +17,6 @@ form.addEventListener("submit", (e) => {
     messages.push("Passowrd must be longer than 6 characters!");
   }
   if (!isValidPassword(password.value.trim())) {
-    //add in the description about ? and !
     messages.push("Password must contain uppercase letter and '?' !");
   }
   if (password.value != confirmPassword.value) {
